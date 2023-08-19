@@ -3,9 +3,17 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+        k = k % len(nums)
         while k > 0 :
             temp = nums.pop()
             nums.insert(0, temp)
+
+    
+            # temp = nums.pop()
+            # nums = nums[::-1]
+            # nums.append(temp)
+            # nums = nums[::-1]
+
             k -= 1
 
         return nums
