@@ -14,8 +14,7 @@ class Solution:
             else: 
                 indexR -= 1
             
-            currArea = (indexR - indexL) * min(height[indexR], height[indexL])
-            if currArea > maxA:
-                maxA = currArea
+            maxA = max(maxA, (indexR - indexL) * min(height[indexR], height[indexL]))
+            
         
         return maxA
