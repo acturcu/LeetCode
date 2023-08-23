@@ -13,12 +13,18 @@ class Solution:
         
         dictionary = {}
         for index, el in enumerate(nums):
-            dictionary[el] = index
-        
-        for index, el in enumerate(nums):
+            
             remaining = target - el
-
+            # dictionary[el] = index
             if remaining in dictionary and dictionary[remaining] != index:
-                return [index, dictionary[remaining]] 
+                return [index, dictionary[remaining]]
+            dictionary[el] = index
+            
+        
+        # for index, el in enumerate(nums):
+        #     remaining = target - el
+
+        #     if remaining in dictionary and dictionary[remaining] != index:
+        #         return [index, dictionary[remaining]] 
 
         return []
